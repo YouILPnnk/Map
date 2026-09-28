@@ -1,6 +1,6 @@
 if not game.PlaceId == "537413528" then
   else
-  print("Test 3")
+  print("Test 4")
 end
 
 function fm()
@@ -8,6 +8,7 @@ function fm()
 	for _,v in pairs(v1:GetDescendants()) do
 		if v:IsA("Part") or v:IsA("MeshPart") then
 			v.BrickColor = BrickColor.new("Fossil")
+			v.Material = Enum.Material.SmoothPlastic
 		end
 	end
 end

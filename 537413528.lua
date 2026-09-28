@@ -9,6 +9,7 @@ function fm()
 		if v:IsA("Part") or v:IsA("MeshPart") then
 			v.BrickColor = BrickColor.new("Fossil")
 			v.Material = Enum.Material.SmoothPlastic
+			v.CastShadow = false
 		end
 	end
 end

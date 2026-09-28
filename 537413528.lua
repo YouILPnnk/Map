@@ -5,7 +5,7 @@ end
 
 function fm()
 	local v1 = game.Workspace
-	for _,v in v1:GetDescendant() do
+	for _,v in v1:GetDescendants() do
 		if v:IsA("Part") or v:IsA("MeshPart") then
 			v.BrickColor = "Fossil"
 		end

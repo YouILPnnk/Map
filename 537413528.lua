@@ -1,15 +1,19 @@
+_G.FastMode = false
+
 repeat wait() until game:IsLoaded()
 if not game.PlaceId == "537413528" then
 	return
 	else
 end
 function fm()
-	local v1 = game.Workspace
-	for _,v in pairs(v1:GetDescendants()) do
-		if v:IsA("Part") or v:IsA("MeshPart") then
-			v.BrickColor = BrickColor.new("Fossil")
-			v.Material = Enum.Material.SmoothPlastic
-			v.CastShadow = false
+	if _G.FastMode = true then
+		local v1 = game.Workspace
+		for _,v in pairs(v1:GetDescendants()) do
+			if v:IsA("Part") or v:IsA("MeshPart") then
+				v.BrickColor = BrickColor.new("Fossil")
+				v.Material = Enum.Material.SmoothPlastic
+				v.CastShadow = false
+			end
 		end
 	end
 end
@@ -45,7 +49,13 @@ function Farm()
 	Teleport()
 end
 fm()
-wait(10)
-while true do
-	Farm()
+if _G.FastMode == true then
+	wait(10)
+	while true do
+		Farm()
+	end
+else
+	while true do
+		Farm()
+	end
 end
